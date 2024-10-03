@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "Jinbu";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("./fonts/DingTalk JinBuTi.ttf") format("truetype");
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #d8d8d8;
+    border-radius: 5px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #bdbdbd;
+}
+
+/* 防止 tailwindcss 和 antd 冲突 */
+.anticon svg {
+    vertical-align: baseline;
+}
+.ant-btn-primary {
+    background-color: #1677ff;
+}
+.ant-btn-default,
+.ant-btn-dashed {
+    background-color: white;
+}

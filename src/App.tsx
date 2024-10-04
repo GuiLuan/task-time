@@ -10,7 +10,7 @@ import { useTimer } from "./hooks";
 import copy from "copy-to-clipboard";
 import Wave from "react-wavify";
 
-let WAIT_COUNT: number = 60; // 等待计时器，与后端的定义保持一致
+let WAIT_COUNT: number = 10; // 等待计时器，与后端的定义保持一致
 
 function getTimeStringSecondsAgo(seconds: number) {
   const now = new Date();

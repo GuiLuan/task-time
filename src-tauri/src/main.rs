@@ -5,7 +5,7 @@ use std::sync::mpsc;
 use tauri::{CustomMenuItem, Manager, SystemTray, SystemTrayEvent, SystemTrayMenu, Window};
 
 // 触发“新建任务”的窗口停留秒数
-const WAIT_COUNT: i32 = 60;
+const WAIT_COUNT: i32 = 10;
 const CUR_MODE: MonitorMode = MonitorMode::TITLE;
 
 #[derive(Clone, serde::Serialize)]

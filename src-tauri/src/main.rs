@@ -38,10 +38,9 @@ fn main() {
 
             let (sender, receiver) = mpsc::channel();
             let sender1 = sender.clone();
-            let sender2 = sender.clone();
 
-            app_window.listen("pause", move |_| pasue_monitor(sender1.clone()));
-            app_window.listen("resume", move |_| resume_monitor(sender2.clone()));
+            app_window.listen("pause", move |_| pasue_monitor(sender.clone()));
+            app_window.listen("resume", move |_| resume_monitor(sender1.clone()));
             run_system_window_monitor(app_window, receiver);
             Ok(())
         })
